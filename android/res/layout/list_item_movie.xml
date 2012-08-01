@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.paulovic.labs.movee.view.MovieItemView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="230dip"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/explore_cell_bg_bottom">
+
+    <ImageView
+        android:id="@+id/imageScene"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:duplicateParentState="true"/>
+
+     <LinearLayout
+         android:id="@+id/actionsBox"
+         android:layout_height="wrap_content"
+         android:layout_width="match_parent"
+         android:orientation="horizontal"
+         android:gravity="right"
+         android:paddingTop="10dip"
+         android:background="#F5F2F3"
+         android:layout_alignParentBottom="true">
+
+         <ImageButton 
+             android:id="@+id/buttonGood"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/image_button_background"
+             android:paddingLeft="3dip"
+             android:paddingRight="3dip"
+             android:src="@drawable/ic_rating_good"/>
+         
+         <ImageButton 
+             android:id="@+id/buttonBad"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingLeft="3dip"
+             android:paddingRight="3dip"
+             android:background="@drawable/image_button_background"
+             android:src="@drawable/ic_rating_bad"/>
+
+         <ImageButton 
+             android:id="@+id/buttonFavorite"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingLeft="3dip"
+             android:paddingRight="3dip"
+             android:background="@drawable/image_button_background"
+             android:src="@drawable/ic_rating_favorite"/>
+
+         <ImageButton 
+             android:id="@+id/buttonRemove"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:paddingLeft="3dip"
+             android:paddingRight="3dip"
+             android:background="@drawable/image_button_background"
+             android:src="@drawable/ic_content_remove"/>
+     </LinearLayout>
+    
+    <TextView
+        android:id="@+id/textComment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ONE OF THE GREATEST MOVIES I EVER SAW 3"
+        android:background="#F5F2F3"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"
+        android:paddingTop="10dip"
+        android:paddingLeft="5dip"
+        android:layout_above="@id/actionsBox"/>
+
+    <TextView
+        android:id="@+id/textSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88666666"
+        android:text="Woody Allen"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:paddingLeft="5dip"
+        android:layout_above="@id/textComment"/>
+        
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#88666666"
+        android:text="Love and Death"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="@android:color/white"
+        android:paddingLeft="5dip"
+        android:layout_above="@id/textSubtitle"/>
+
+</com.paulovic.labs.movee.view.MovieItemView>
