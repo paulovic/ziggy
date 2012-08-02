@@ -5,6 +5,15 @@
     android:descendantFocusability="blocksDescendants"
     android:background="@drawable/explore_cell_bg_bottom">
 
+    <TextView
+        android:id="@+id/textLoading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@android:color/black"
+        android:paddingTop="@dimen/paddingTopItem"
+        android:gravity="center"
+        android:text="@string/loading_uppercase"/>
     <ImageView
         android:id="@+id/imageScene"
         android:layout_width="match_parent"
@@ -18,8 +27,8 @@
          android:layout_width="match_parent"
          android:orientation="horizontal"
          android:gravity="right"
-         android:paddingTop="10dip"
-         android:background="#F5F2F3"
+         android:paddingTop="@dimen/paddingTopItem"
+         android:background="@color/color_content_box"
          android:layout_alignParentBottom="true">
 
          <ImageButton 
@@ -27,16 +36,17 @@
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:background="@drawable/image_button_background"
-             android:paddingLeft="3dip"
-             android:paddingRight="3dip"
+             android:paddingLeft="@dimen/paddingButtonLateral"
+             android:paddingRight="@dimen/paddingButtonLateral"
+             android:contentDescription="HELLOOOO!"
              android:src="@drawable/ic_rating_good"/>
          
          <ImageButton 
              android:id="@+id/buttonBad"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:paddingLeft="3dip"
-             android:paddingRight="3dip"
+             android:paddingLeft="@dimen/paddingButtonLateral"
+             android:paddingRight="@dimen/paddingButtonLateral"
              android:background="@drawable/image_button_background"
              android:src="@drawable/ic_rating_bad"/>
 
@@ -44,8 +54,8 @@
              android:id="@+id/buttonFavorite"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:paddingLeft="3dip"
-             android:paddingRight="3dip"
+             android:paddingLeft="@dimen/paddingButtonLateral"
+             android:paddingRight="@dimen/paddingButtonLateral"
              android:background="@drawable/image_button_background"
              android:src="@drawable/ic_rating_favorite"/>
 
@@ -53,8 +63,8 @@
              android:id="@+id/buttonRemove"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:paddingLeft="3dip"
-             android:paddingRight="3dip"
+             android:paddingLeft="@dimen/paddingButtonLateral"
+             android:paddingRight="@dimen/paddingButtonLateral"
              android:background="@drawable/image_button_background"
              android:src="@drawable/ic_content_remove"/>
      </LinearLayout>
@@ -63,23 +73,22 @@
         android:id="@+id/textComment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="ONE OF THE GREATEST MOVIES I EVER SAW 3"
-        android:background="#F5F2F3"
+        android:background="@color/color_content_box"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:textColor="@android:color/black"
-        android:paddingTop="10dip"
-        android:paddingLeft="5dip"
+        android:paddingTop="@dimen/paddingTopItem"
+        android:paddingLeft="@dimen/paddingTextLateral"
+        android:paddingRight="@dimen/paddingTextLateral"
         android:layout_above="@id/actionsBox"/>
 
     <TextView
         android:id="@+id/textSubtitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#88666666"
-        android:text="Woody Allen"
+        android:background="@color/color_transparent_title_stripe"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="@android:color/white"
-        android:paddingLeft="5dip"
+        android:paddingLeft="@dimen/paddingTextLateral"
         android:layout_above="@id/textComment"/>
         
 
@@ -87,11 +96,10 @@
         android:id="@+id/textTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#88666666"
-        android:text="Love and Death"
+        android:background="@color/color_transparent_title_stripe"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white"
-        android:paddingLeft="5dip"
+        android:paddingLeft="@dimen/paddingTextLateral"
         android:layout_above="@id/textSubtitle"/>
 
 </com.paulovic.labs.movee.view.MovieItemView>

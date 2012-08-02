@@ -20,9 +20,10 @@ public class MoviesAdapter extends BaseAdapter {
     // Helper for communication with owner activity
     private Handler mHandler;
 
-    public MoviesAdapter(List data, Context context) {
+    public MoviesAdapter(List data, Context context, Handler handler) {
         mData = data;
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mHandler = handler;
     }
 
     @Override
@@ -47,7 +48,11 @@ public class MoviesAdapter extends BaseAdapter {
             convertView = mInflater.inflate(R.layout.list_item_movie, parent, false);
         }
         view = (MovieItemView) convertView;
-        view.bindView((MovieData) getItem(position), mHandler); 
+
+        MovieData movieData = (MovieData) getItem(position);
+        movieData.setId(position);
+
+        view.bindView(movieData, mHandler); 
         return view;
     }
     
@@ -55,4 +60,13 @@ public class MoviesAdapter extends BaseAdapter {
         mHandler = handler;
     }
 
+    public void updateItems(List entries) {
+        mData = entries;
+        notifyDataSetChanged();
+    }
+    
+    public void removeItem(int id) {
+        mData.remove(id);
+        notifyDataSetChanged();
+    }
 }

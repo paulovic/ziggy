@@ -3,13 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#e2dcd5" >
+    android:background="@color/activity_movies_bg" >
 
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="30dip" >
+        android:layout_height="20dip" >
     </LinearLayout>
+
+    <TextView 
+        android:id="@+id/textEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:text="@string/empty_list"/>
 
     <ListView
         android:id="@android:id/list"

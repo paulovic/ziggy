@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Movee</string>
+    <string name="app_name_title">movee</string>
+
+    <!-- Movies activity -->
+    <string name="menu_refresh">Refresh</string>
+    <string name="lets_watch">Let\'s watch </string>
+    <string name="empty_list">Ohh no! Press refresh and get more movies.</string> 
+
+    <string name="like_button_toast">That\'s cool.</string>
+    <string name="dislike_button_toast">Nothing special&#8230;</string>
+    <string name="love_button_toast">I love it. Let\'s see again.</string>
+
+    <string name="loading_uppercase">LOADING</string>
 </resources>

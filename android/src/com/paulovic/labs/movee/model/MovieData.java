@@ -5,6 +5,7 @@ public class MovieData {
     private String mSubtitle;
     private String mComment;
     private int mDrawableScene;
+    private int mId;
 
     public MovieData(String text, String subtitle, String comment, int resScene){
         mTitle = text;
@@ -20,12 +21,20 @@ public class MovieData {
     public String getTitle() {
         return mTitle;
     }
-    
+
     public String getSubtitle() {
         return mSubtitle;
     }
-    
+
     public String getComment() {
         return mComment;
+    }
+
+    public int getId() {
+        return mId;
+    }
+
+    public void setId(int id) {
+        mId = id;
     }
 }
